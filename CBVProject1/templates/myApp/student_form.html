@@ -1,0 +1,15 @@
+<!Doctype html>
+
+<html lang="en" dir="ltr">
+{%extends 'myApp/parent.html'%}
+ <body>
+  {%block for_child%}
+  <h1 style="color:red;">Student Creation Form</h1>
+  <form method="post">
+  {{form.as_p}}
+  {% csrf_token %}
+  <input type="submit" class="btn btn-lg btn-primary" value="Insert Record">
+  </form>
+  {%endblock%}
+ </body>
+</html>
